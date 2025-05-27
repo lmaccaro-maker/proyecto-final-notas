@@ -5,14 +5,14 @@ export const useNoteStore = defineStore("notes", () => {
     const notes = ref([
         {
             id: "1",
-            title: "Ir al médico",
+            title: "Ir al supermercado",
             marked: false
 
         },
 
         {
             id: "2",
-            title: "Contrasena del wifi: 123456",
+            title: "Ir al gym",
             marked: false
 
         },
