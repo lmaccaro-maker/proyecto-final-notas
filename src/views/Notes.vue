@@ -1,29 +1,31 @@
 <script setup>
-import { useNoteStore } from '../stores/note';
+import HeaderComponent from "../components/HeaderComponent.vue";
+import NoteCard from "../components/NoteCard.vue";
+import { useNoteStore } from "../stores/note";
 
- 
- const noteStore =useNoteStore();
+const noteStore = useNoteStore();
 </script>
 
 <template>
-<section id="notes-page">
-<h2>Notas </h2>
-<ul class="note-list">
-<li v-for = "note in noteStore.notes" :key="note.id">
-{{ note.title }}
-</li>
-</ul>
-</section>
+  <HeaderComponent />
+
+  <section id="notes-page">
+    <h2>Notas</h2>
+    <ul class="note-list">
+      <li v-for="note in noteStore.notes" :key="note.id">
+        <NoteCard :note="note"></NoteCard>
+      </li>
+    </ul>
+  </section>
 </template>
 
-
-<style>
+<style scoped>
 /* Estilo general para la sección de notas */
 #notes-page {
   max-width: 800px; /* Limitar el ancho máximo de la sección para un mejor enfoque de lectura */
   margin: 0 auto; /* Centrar la sección en la página */
   padding: 20px; /* Añadir espaciado interno */
-  background-color: #f5f5f5; /* Fondo gris claro para contraste */
+  background-color: #1a808c; /* Fondo gris claro para contraste */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidad */
 }
@@ -57,6 +59,4 @@ h2 {
 .note-list li:hover {
   background-color: #e3e3e3; /* Sobrescribir fondo color en hover */
 }
-
-
 </style>
