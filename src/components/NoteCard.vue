@@ -11,50 +11,39 @@ defineProps({
   </article>
 </template>
 
-<style scoped>
-.note-card {
-  background-color: #eaf4e6; /* Verde claro */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-  margin-bottom: 20px;
-  max-width: 400px;
-  margin: 10px auto;
-  border: 1px solid #c5dbc8; /* Borde coordinado en verde */
-  cursor: pointer;
+<style>
+#notes-page {
+  background-color: #198460; /* Fondo verde claro */
+  padding: 30px; /* Espaciado interno amplio */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  margin: 20px auto; /* Centro de la página */
+  max-width: 800px; /* Ancho máximo */
+  display: flex; /* Usar flexbox para alinear contenido */
+  flex-direction: column; /* Orientación en columna */
+  align-items: center; /* Alinea horizontalmente al centro */
 }
 
-.note-card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+h2 {
+  font-size: 28px; /* Tamaño de la letra del encabezado */
+  color: #333; /* Texto oscuro para contraste */
+  text-align: center; /* Centración del texto */
+  margin-bottom: 20px; /* Espaciado debajo del encabezado */
 }
 
-.note-card:active {
-  transform: translateY(2px);
+.note-list {
+  list-style-type: none; /* Sin viñetas predeterminadas */
+  padding: 0; /* Remover padding interno */
+  margin: 0; /* Remover márgenes */
+  width: 100%; /* Adaptar al ancho del contenedor */
+  display: flex; /* Usar flex para organizar elementos */
+  flex-direction: column; /* Mantener orientación vertical */
+  align-items: center; /* Centrar individualmente */
 }
 
-.card-title {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #98c1a9; /* Borde verde sólido */
-  border-radius: 8px;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
-  margin-bottom: 10px;
-}
-
-.card-title:focus {
-  border-color: #609b76; /* Verde más oscuro al focalizarse */
-  outline: none;
-  background-color: #dfeee1; /* Ligero fondo diferente en focus */
-}
-
-input[type="checkbox"] {
-  transform: scale(1.2); 
-  margin-left: 10px; 
-  cursor: pointer; 
-  background-color: #eaf4e6; /* Fondo verde claro */
+.note-list li {
+  margin-bottom: 15px; /* Espacio entre notas */
+  width: 100%; /* Asegura que las notas tengan el mismo tamaño */
+  max-width: 400px; /* Limita ancho de cada nota para legibilidad */
 }
 </style>

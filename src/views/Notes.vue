@@ -1,4 +1,5 @@
 <script setup>
+import CreateNote from "../components/CreateNote.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import NoteCard from "../components/NoteCard.vue";
 import { useNoteStore } from "../stores/note";
@@ -12,14 +13,18 @@ const noteStore = useNoteStore();
   <section id="notes-page">
     <h2>Notas</h2>
     <ul class="note-list">
+      <li><CreateNote /></li>
       <li v-for="note in noteStore.notes" :key="note.id">
         <NoteCard :note="note"></NoteCard>
+      </li>
+      <li v-if="!noteStore.notes.length" class="empty-msg">
+        <h2>No hay nada que mostrar, crea tu primera nota</h2>
       </li>
     </ul>
   </section>
 </template>
 
-<style scoped>
+<style>
 /* Estilo general para la sección de notas */
 #notes-page {
   max-width: 800px; /* Limitar el ancho máximo de la sección para un mejor enfoque de lectura */
@@ -58,5 +63,11 @@ h2 {
 /* Efecto hover para cada nota */
 .note-list li:hover {
   background-color: #e3e3e3; /* Sobrescribir fondo color en hover */
+}
+
+.empty-msg {
+  text-align: center;
+  font-size: 4px;
+  font-family: 4px;
 }
 </style>

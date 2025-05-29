@@ -16,14 +16,14 @@
   </header>
 </template>
 
-<style scoped>
+<style>
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   background-color: #eaf4e6; /* Fondo verde muy claro */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(106, 19, 19, 0.1);
   color: #333;
 }
 
