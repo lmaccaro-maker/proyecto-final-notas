@@ -16,7 +16,7 @@
   </header>
 </template>
 
-<style>
+<style scoped>
 .header {
   display: flex;
   flex-direction: column;

@@ -24,7 +24,7 @@ const title = ref("");
   </form>
 </template>
 
-<style>
+<style scoped>
 
 .note-form {
   display: flex; /* Uso de flex para organizar los elementos en línea */

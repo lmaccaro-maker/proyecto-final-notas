@@ -2,20 +2,31 @@
 import CreateNote from "../components/CreateNote.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import NoteCard from "../components/NoteCard.vue";
+import Loader from "../components/Loader.vue"
+import Alert from "../components/Alert.vue";
+
 import { useNoteStore } from "../stores/note";
+// import { useApiNoteStore } from "../stores/apiNote";
 
 const noteStore = useNoteStore();
+// const noteStore = useApiNoteStore();
 </script>
 
 <template>
   <HeaderComponent />
 
   <section id="notes-page">
-    <h2>Notas</h2>
-    <ul class="note-list">
+    <h2>Notas</h2> 
+    <div v-if="noteStore.loading"> 
+      <loader />
+    </div>
+     <div v-else-if="noteStore.error"> 
+     <alert message="Algo ha salido mal" type="error"/>
+    </div>
+    <ul v-else class="note-list">
       <li><CreateNote /></li>
       <li v-for="note in noteStore.notes" :key="note.id">
-        <NoteCard :note="note"></NoteCard>
+        <NoteCard :note="note" :deleteNotes="noteStore.deleteNotes"></NoteCard>
       </li>
       <li v-if="!noteStore.notes.length" class="empty-msg">
         <h2>No hay nada que mostrar, crea tu primera nota</h2>
@@ -24,13 +35,13 @@ const noteStore = useNoteStore();
   </section>
 </template>
 
-<style>
+<style scoped>
 /* Estilo general para la sección de notas */
 #notes-page {
   max-width: 800px; /* Limitar el ancho máximo de la sección para un mejor enfoque de lectura */
   margin: 0 auto; /* Centrar la sección en la página */
   padding: 20px; /* Añadir espaciado interno */
-  background-color: #1a808c; /* Fondo gris claro para contraste */
+  background-color: #86c095; /* Fondo gris claro para contraste */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidad */
 }
