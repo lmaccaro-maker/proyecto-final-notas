@@ -1,8 +1,7 @@
 <script setup>
 import CreateNote from "../components/CreateNote.vue";
-import HeaderComponent from "../components/HeaderComponent.vue";
 import NoteCard from "../components/NoteCard.vue";
-import Loader from "../components/Loader.vue"
+import Loader from "../components/Loader.vue";
 import Alert from "../components/Alert.vue";
 
 import { useNoteStore } from "../stores/note";
@@ -13,72 +12,83 @@ const noteStore = useNoteStore();
 </script>
 
 <template>
-  <HeaderComponent />
-
   <section id="notes-page">
-    <h2>Notas</h2> 
-    <div v-if="noteStore.loading"> 
+    <h2>Add your notes</h2>
+    <CreateNote v-if="!noteStore.loading && !noteStore.error" />
+    <div v-if="noteStore.loading">
       <loader />
     </div>
-     <div v-else-if="noteStore.error"> 
-     <alert message="Algo ha salido mal" type="error"/>
+    <div v-else-if="noteStore.error">
+      <alert message="Algo ha salido mal" type="error" />
     </div>
     <ul v-else class="note-list">
-      <li><CreateNote /></li>
       <li v-for="note in noteStore.notes" :key="note.id">
         <NoteCard :note="note" :deleteNotes="noteStore.deleteNotes"></NoteCard>
       </li>
       <li v-if="!noteStore.notes.length" class="empty-msg">
-        <h2>No hay nada que mostrar, crea tu primera nota</h2>
+        <h2>Nothing to display, create your first note</h2>
       </li>
     </ul>
   </section>
 </template>
 
 <style scoped>
-/* Estilo general para la sección de notas */
 #notes-page {
-  max-width: 800px; /* Limitar el ancho máximo de la sección para un mejor enfoque de lectura */
-  margin: 0 auto; /* Centrar la sección en la página */
-  padding: 20px; /* Añadir espaciado interno */
-  background-color: #86c095; /* Fondo gris claro para contraste */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidad */
+  background-color: #f0f4f8; /* Fondo azul muy claro para una atmósfera acogedora */
+  padding: 30px; /* Espacio interno amplio para contenido */
+  border-radius: 12px; /* Bordes suavizados para un acabado elegante */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Sombra más perceptible para profundidad */
+  margin: 40px auto; /* Margen superior para separación del encabezado */
+  max-width: 900px; /* Ancho máximo para uso eficiente del espacio */
 }
 
-/* Título de la sección */
 h2 {
-  font-size: 36px; /* Aumentar tamaño de fuente del título */
-  color: #333; /* Texto oscuro para contraste */
-  text-align: center; /* Centrar el título */
-  margin-bottom: 20px; /* Espaciado debajo del título */
+  font-size: 32px; /* Título prominente */
+  color: #1a3b5d; /* Azul medio para una mejor claridad */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 30px; /* Espaciado inferior más pronunciado */
+  font-weight: bold;
+  text-transform: uppercase; /* Mayúsculas para enfatizar */
 }
 
-/* Listado de notas */
 .note-list {
-  list-style-type: none; /* Remover viñetas predeterminadas */
-  padding: 0; /* Remover relleno por defecto */
+  list-style: none; /* Sin puntos de lista */
+  padding: 0; /* Ningún relleno interno */
+  margin: 0; /* Márgenes afuera */
+  display: flex;
+  flex-wrap: wrap; /* Ajustes automáticos a filas múltiples */
+  gap: 24px; /* Espacio consistente entre notas */
+  justify-content: center; /* Centrar el contenido */
 }
 
-/* Elementos de lista */
 .note-list li {
-  font-size: 18px; /* Tamaño de texto cómodo para leer */
-  color: #555; /* Texto gris oscuro */
-  background-color: #fff; /* Fondo blanco para cada nota */
-  padding: 15px; /* Espaciado interno */
-  margin-bottom: 10px; /* Separado entre notas */
-  border-radius: 5px; /* Bordes ligeramente redondeados */
-  transition: background-color 0.3s ease; /* Transición suave */
-}
-
-/* Efecto hover para cada nota */
-.note-list li:hover {
-  background-color: #e3e3e3; /* Sobrescribir fondo color en hover */
+  flex: 1 1 280px; /* Ajustar automáticamente para adaptarse a diferentes tamaños de pantalla */
 }
 
 .empty-msg {
   text-align: center;
-  font-size: 4px;
-  font-family: 4px;
+  font-size: 20px;
+  color: #555; /* Color gris oscuro */
+  margin: 20px 0;
+}
+
+.create-note-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(197, 219, 200); /* Verde vibrante */
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.create-note-plus:hover {
+  background-color: rgb(
+    197,
+    219,
+    200
+  ); /* Verde ligeramente más oscuro en hover */
 }
 </style>

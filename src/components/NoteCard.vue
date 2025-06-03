@@ -1,4 +1,7 @@
 <script setup>
+import Checkbox from './Checkbox.vue';
+import DeleteButton from './DeleteButton.vue';
+
 const props = defineProps({
   note: Object,
   deleteNotes: Function,
@@ -12,8 +15,9 @@ const deleteThisNote = () => {
 <template>
   <article class="note-card green">
     <input type="text" class="card-title" v-model="note.title" />
-    <input type="checkbox" v-model="note.marked" />
-    <button v-if="deleteNotes" @click="deleteThisNote">Delete</button>
+    <Checkbox v-model="note.marked"/>
+    <!-- <button v-if="deleteNotes" @click="deleteThisNote">Delete</button> -->
+    <DeleteButton :deleteNote="deleteThisNote" />
   </article>
 </template>
 
@@ -34,19 +38,19 @@ const deleteThisNote = () => {
 }
 
 .card-title {
-  width: 100%;
+  flex: 1; /* Ocupa todo el espacio disponible */
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #98c1a9; /* Borde verde sólido */
-  border-radius: 8px;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
+  background-color: transparent;
+  border-color: transparent;
+  color: grey;
+  box-shadow: none;
+  border: none;
+  outline: none; /* Elimina el borde de enfoque por defecto */
 }
 
 .card-title:focus {
-  border-color: #609b76; /* Verde más oscuro al foco */
   outline: none;
-  background-color: #dfeee1; /* Fondo claro al enfoque */
 }
 
 input[type="checkbox"] {
@@ -56,8 +60,8 @@ input[type="checkbox"] {
 }
 
 button {
-  background-color: #dc3545; /* Rojo para botón de eliminar */
-  color: white;
+  background-color: #579f78; /* Rojo para botón de eliminar */
+  color: black;
   border: none;
   border-radius: 8px;
   padding: 8px 12px;
@@ -67,7 +71,7 @@ button {
 }
 
 button:hover {
-  background-color: #c82333; /* Oscurece al pasar el ratón */
+  background-color: #579f78; /* Oscurece al pasar el ratón */
 }
 
 button:active {
