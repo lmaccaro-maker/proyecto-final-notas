@@ -15,9 +15,10 @@ const deleteThisNote = () => {
 <template>
   <article class="note-card green">
     <input type="text" class="card-title" v-model="note.title" />
-    <Checkbox v-model="note.marked"/>
-    <!-- <button v-if="deleteNotes" @click="deleteThisNote">Delete</button> -->
-    <DeleteButton :deleteNote="deleteThisNote" />
+    <div class="action-buttons">
+      <Checkbox v-model="note.marked"/>
+      <DeleteButton :deleteNote="deleteThisNote" />
+    </div>
   </article>
 </template>
 
@@ -76,5 +77,11 @@ button:hover {
 
 button:active {
   transform: translateY(2px); /* Efecto de "presionado" al hacer clic */
+}
+.action-buttons {
+  display: flex;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: flex-end;
 }
 </style>
