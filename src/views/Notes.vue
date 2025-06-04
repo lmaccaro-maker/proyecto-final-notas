@@ -34,41 +34,41 @@ const noteStore = useNoteStore();
 
 <style scoped>
 #notes-page {
-  background-color: #f0f4f8; /* Fondo azul muy claro para una atmósfera acogedora */
-  padding: 30px; /* Espacio interno amplio para contenido */
-  border-radius: 12px; /* Bordes suavizados para un acabado elegante */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Sombra más perceptible para profundidad */
-  margin: 40px auto; /* Margen superior para separación del encabezado */
-  max-width: 900px; /* Ancho máximo para uso eficiente del espacio */
+  background-color: #eaf4e6; /* Uniform light green background */
+  padding: 30px;
+  border-radius: 12px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to add depth */
+  margin: 40px auto;
+  max-width: 900px;
 }
 
 h2 {
-  font-size: 25px; /* Título prominente */
+  font-size: 25px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2e7d32; /* Cambio a un verde profesional */
-  font-style: italic; /* Estilo en cursiva */
-  text-align: center; /* Texto centrado */
-  margin-bottom: 25px; /* Espaciado inferior */
+  color: #2e7d32; 
+  font-style: italic; 
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .note-list {
-  list-style: none; /* Sin puntos de lista */
-  padding: 0; /* Ningún relleno interno */
-  margin: 0; /* Márgenes afuera */
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-wrap: wrap; /* Ajustes automáticos a filas múltiples */
-  gap: 24px; /* Espacio consistente entre notas */
-  justify-content: center; /* Centrar el contenido */
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
 .note-list li {
-  flex: 1 1 280px; /* Ajustar automáticamente para adaptarse a diferentes tamaños de pantalla */
+  flex: 1 1 280px;
 }
 
 .empty-msg {
   text-align: center;
   font-size: 20px;
-  color: #555; /* Color gris oscuro */
+  color: #2e7d32; /* Harmonize with the green theme */
   margin: 20px 0;
 }
 
@@ -77,7 +77,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: rgb(197, 219, 200); /* Verde vibrante */
+  background-color: #c5dbc8; /* Consistent light green */
   color: white;
   border-radius: 8px;
   transition: background-color 0.3s;
@@ -85,10 +85,6 @@ h2 {
 }
 
 .create-note-plus:hover {
-  background-color: rgb(
-    197,
-    219,
-    200
-  ); /* Verde ligeramente más oscuro en hover */
+  background-color: #adcbb3; /* Slightly darker green on hover */
 }
 </style>
