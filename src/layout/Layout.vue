@@ -36,9 +36,13 @@
 }
 
 .title {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+  color: #2e7d32; /* Professional green color */
+  font-style: italic; /* Italicize the text */
+  font-weight: bold; /* Maintain bold style for emphasis */
+  text-align: center; /* Make alignment consistent */
+  margin-bottom: 15px; /* Bottom margin for spacing */
 }
 
 .nav-list {
@@ -77,8 +81,9 @@
 }
 
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #eaf4e6;
+  color: grey;
+  text-transform: bold;
   text-align: center;
   padding: 10px;
 

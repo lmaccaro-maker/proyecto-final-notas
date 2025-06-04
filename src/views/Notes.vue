@@ -43,12 +43,12 @@ const noteStore = useNoteStore();
 }
 
 h2 {
-  font-size: 32px; /* Título prominente */
-  color: #1a3b5d; /* Azul medio para una mejor claridad */
+  font-size: 25px; /* Título prominente */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e7d32; /* Cambio a un verde profesional */
+  font-style: italic; /* Estilo en cursiva */
   text-align: center; /* Texto centrado */
-  margin-bottom: 30px; /* Espaciado inferior más pronunciado */
-  font-weight: bold;
-  text-transform: uppercase; /* Mayúsculas para enfatizar */
+  margin-bottom: 25px; /* Espaciado inferior */
 }
 
 .note-list {
