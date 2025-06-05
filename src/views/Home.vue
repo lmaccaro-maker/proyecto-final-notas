@@ -1,42 +1,33 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <h2>Notes</h2>
-  <h3> Here you can write all your notes</h3>
+  <div class="home-container">
+    <!-- Contents of the home page -->
+    <h2>This is a webpage where you can save all your notes</h2>
+  </div>
 </template>
 
 <style scoped>
-/* Global style reset and background */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #eaf4e6; /* Light green background for consistency */
-  color: #333;
-}
-
-/* Container for page content */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+.home-container {
+  height: 100vh; /* Full height for demonstration */
+  background-image: url("https://img.freepik.com/foto-gratis/apilado-tarjeta-verde-telon-fondo-abstracto_23-2147981589.jpg");
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center image within the container */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #333; /* Text color for readability */
 }
 
 /* Header Styles */
 h2 {
-  font-size: 2.5rem;
-  color: #2e7d32; /* Rich green */
-  border-bottom: 2px solid #2e7d32;
+  font-size: 20px;
+  color: #grey;
+  border-bottom: 2px solid #grey;
   padding-bottom: 10px;
   margin-bottom: 15px;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: #2e7d32;
-  margin-bottom: 20px;
 }
 
 /* Intro Section Styling */
