@@ -36,19 +36,20 @@ const noteStore = useNoteStore();
 #notes-page {
   background-color: #eaf4e6; /* Uniform light green background */
   padding: 30px;
-  border-radius: 12px; 
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to add depth */
   margin: 40px auto;
   max-width: 900px;
 }
 
 h2 {
-  font-size: 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2e7d32; 
-  font-style: italic; 
-  text-align: center;
-  margin-bottom: 25px;
+  font-size: 20px;
+  color: green;
+  border-bottom: 2px solid grey; /* Use 'grey' or the color code '#808080' */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center; /* Center the text */
+  font-style: italic; /* Make the text italic */
 }
 
 .note-list {

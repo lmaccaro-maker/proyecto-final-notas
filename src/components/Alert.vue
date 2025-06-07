@@ -1,10 +1,10 @@
 <script setup>
 const props = defineProps({
-   message: String,
-   type: {
-     type: String,
-     default: 'info', // Valores posibles: 'error', 'success', 'info'
-   }
+  message: String,
+  type: {
+    type: String,
+    default: "info", // Valores posibles: 'error', 'success', 'info'
+  },
 });
 </script>
 

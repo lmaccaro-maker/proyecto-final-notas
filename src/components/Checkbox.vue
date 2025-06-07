@@ -12,8 +12,6 @@
   </div>
 </template>
 
-
-
 <script setup>
 defineProps({
   modelValue: { type: Boolean, default: false },
@@ -54,7 +52,7 @@ input[type="checkbox"] {
   width: calc(30px * 0.24);
   height: calc(30px * 0.74);
   border-right: calc(30px * 0.25) solid #2e7d32; /* Dark green for visibility */
-  border-bottom: calc(30px * 0.25) solid #2e7d32; 
+  border-bottom: calc(30px * 0.25) solid #2e7d32;
   transform: rotate(45deg) scale(0);
   opacity: 0;
   transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.5);

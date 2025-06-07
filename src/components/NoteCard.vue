@@ -1,6 +1,6 @@
 <script setup>
-import Checkbox from './Checkbox.vue';
-import DeleteButton from './DeleteButton.vue';
+import Checkbox from "./Checkbox.vue";
+import DeleteButton from "./DeleteButton.vue";
 
 const props = defineProps({
   note: Object,
@@ -16,7 +16,7 @@ const deleteThisNote = () => {
   <article class="note-card green">
     <input type="text" class="card-title" v-model="note.title" />
     <div class="action-buttons">
-      <Checkbox v-model="note.marked"/>
+      <Checkbox v-model="note.marked" />
       <DeleteButton :deleteNote="deleteThisNote" />
     </div>
   </article>

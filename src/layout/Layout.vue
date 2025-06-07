@@ -11,7 +11,8 @@
     </header>
 
     <main class="content">
-      <slot></slot> <!-- Aquí se renderizan tus componentes. -->
+      <slot></slot>
+      <!-- Aquí se renderizan tus componentes. -->
     </main>
 
     <footer class="footer">
@@ -37,7 +38,7 @@
 
 .title {
   font-size: 32px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
   color: #2e7d32; /* Professional green color */
   font-style: italic; /* Italicize the text */
   font-weight: bold; /* Maintain bold style for emphasis */
@@ -86,6 +87,5 @@
   text-transform: bold;
   text-align: center;
   padding: 10px;
-
 }
 </style>

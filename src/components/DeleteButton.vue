@@ -1,23 +1,23 @@
 <template>
-    <div id="delete-wrapper" @click="deleteFunction">
-      <div class="cap"></div>
-      <div class="inner-delete">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <div id="delete-wrapper" @click="deleteFunction">
+    <div class="cap"></div>
+    <div class="inner-delete">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
 </template>
 
 <script setup>
 const props = defineProps({
-    deleteNote: {
-        type: Function
-    }
-})
+  deleteNote: {
+    type: Function,
+  },
+});
 const deleteFunction = () => {
-    props.deleteNote()
-}
+  props.deleteNote();
+};
 </script>
 <style scoped>
 #delete-wrapper {
@@ -55,7 +55,8 @@ const deleteFunction = () => {
   max-width: 35px;
   position: relative;
   background-color: #ffffff;
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.3s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 0.3s ease-in-out;
   transform-origin: top center;
 }
 

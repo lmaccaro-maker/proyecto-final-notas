@@ -53,9 +53,9 @@ export const useApiNoteStore = defineStore("notes", () => {
 
   const deleteNotes = async (id) => {
     try {
-      error.value=false
+      error.value = false
       await deleteNote(id)
-   } catch (e) {
+    } catch (e) {
       error.value = true
     } finally {
       getStoreNotes()

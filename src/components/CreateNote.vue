@@ -22,6 +22,9 @@ const title = ref("");
     />
     <button class="create-btn">+</button>
   </form>
+  <br>
+  <br>
+  <br>
 </template>
 
 <style scoped>
@@ -29,50 +32,40 @@ const title = ref("");
 .note-form {
   display: flex; /* Use flex to organize inline elements */
   align-items: center; /* Center items vertically */
-  justify-content: center; /* Centrally align all content horizontally */
-  max-width: 400px; /* Maximum width of the form */
-  background-color: #eaf4e6; /* Consistent background for contrast */
-  padding: 10px; /* Uniform padding */
-  border-radius: 8px; /* Rounded borders */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  justify-content: center; /* Center form contents horizontally */
+  max-width: 400px;
+  background-color: #eaf4e6;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
 .note-input {
-  flex-grow: 1; /* Let it use all the remaining space */
+  flex-grow: 1;
   padding: 10px;
   font-size: 16px;
   background-color: transparent;
   border: 1px solid #ccc;
   color: grey;
   border-radius: 4px;
-  box-shadow: none;
-  outline: none; /* Removes default focus border */
-}
-
-.note-input:focus {
-  outline: none; /* Keeps no visible rectangle on focus */
+  outline: none;
 }
 
 .create-btn {
   padding: 10px 15px;
   font-size: 18px;
   color: white;
-  background-color: rgb(197, 219, 200); /* Bright green for the button */
+  background-color: rgb(197, 219, 200);
   border: none;
-  border-radius: 50%; /* Round button */
-  cursor: pointer; /* Indicates interactiveness */
+  border-radius: 50%;
+  cursor: pointer;
   transition: background-color 0.3s;
-  outline: none;
-  flex-shrink: 0; /* Prevent it from shrinking to make room */
-  margin-left: auto; /* Automatically space it to the right edge */
-}
-
-.create-btn:focus {
-  outline: none;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .create-btn:hover {
-  background-color: #218838; /* Darkens slightly on hover */
+  background-color: #218838;
 }
 </style>

@@ -1,9 +1,13 @@
 <template>
-  <div class="home-container" 
-       :style="{ backgroundImage: 'url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg)' }">
-    <h2>This is a webpage where you can save all your notes</h2>
-    <h3>Here you can manage all your tasks and more!</h3>
-  </div>
+  <h2>This is a webpage where you can save all your notes</h2>
+  <h3>Here you can manage all your tasks and more! Click on Notes!</h3>
+  <div
+    class="home-container"
+    :style="{
+      backgroundImage:
+        'url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg)',
+    }"
+  ></div>
 </template>
 
 <style scoped>
@@ -20,22 +24,14 @@
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Optional for text clarity */
 }
 
-/* Header Styles */
-h2 {
+h2, h3 {
   font-size: 20px;
   color: green;
-  border-bottom: 2px solid #grey;
+  border-bottom: 2px solid grey; /* Use 'grey' or the color code '#808080' */
   padding-bottom: 10px;
   margin-bottom: 15px;
-}
-
-
-h3 {
-  font-size: 20px;
-  color: green;
-  border-bottom: 2px solid #grey;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+  text-align: center; /* Center the text */
+  font-style: italic; /* Make the text italic */
 }
 
 /* Intro Section Styling */

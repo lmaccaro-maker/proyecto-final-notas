@@ -5,7 +5,7 @@
 </template>
 
 <style scoped>
-.loader-container{
+.loader-container {
   min-height: 200px;
   min-width: 100%;
   display: flex;

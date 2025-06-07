@@ -1,5 +1,6 @@
 import { API_URL } from "./constants"
 
+
 const fetchjson = async (params, newUrl) => {
   try {
     const response = await fetch(newUrl ?? API_URL, params)
