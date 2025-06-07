@@ -13,7 +13,7 @@ const deleteThisNote = () => {
 </script>
 
 <template>
-  <article class="note-card green">
+  <article class="note-card">
     <input type="text" class="card-title" v-model="note.title" />
     <div class="action-buttons">
       <Checkbox v-model="note.marked" />
@@ -23,19 +23,59 @@ const deleteThisNote = () => {
 </template>
 
 <style scoped>
+
 .note-card {
-  background-color: #eaf4e6; /* Verde claro para fondo */
+  background-color: #fffae5; /* Soft yellow for a sticky note look */
   padding: 20px;
-  border-radius: 12px; /* Bordes redondeados para suavidad visual */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  margin-bottom: 20px; /* Espacio inferior entre tarjetas */
-  max-width: 400px;
-  margin: 10px auto;
-  border: 1px solid #c5dbc8; /* Borde coordinado */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for 3D effect */
+  margin-bottom: 20px;
+  max-width: 300px; /* Typical width restraint for sticky notes */
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #e2e2e2; /* Light border to mimic note edges */
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* Alinear verticalmente los elementos */
-  gap: 10px; /* Espaciado entre los elementos dentro de la tarjeta */
+  flex-direction: column;
+  gap: 10px;
+  height: 200px; /* Increased height for a taller note */
+  width: 100%;
+  transform: rotate(-1deg); /* Slight rotation */
+  position: relative;
+}
+
+.note-card::before {
+  content: ""; /* To simulate a curl */
+  position: absolutely;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff; /* White for brightness */
+  border-radius: 50%;
+  transform: rotate(45deg); /* Rotate to give curl effect */
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-card .pin {
+  width: 15px;
+  height: 15px;
+  background-color: #db4437; /* Red pin for accent */
+  border-radius: 50%;
+  position: absolutely;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons {
+  display: flex; /* Enables flexbox for alignment */
+  align-items: center; /* Centers elements vertically */
+  justify-content: flex-end; /* Aligns elements to the right */
+  gap: 7px; /* Space between checkbox and delete button */
+  width: 100%; /* Uses full width of the card */
 }
 
 .card-title {

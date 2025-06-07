@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <header class="header">
-      <h1 class="title">My Notes App</h1>
+      <h1 class="title">My Notes Webpage</h1>
       <nav>
         <ul class="nav-list">
           <li><router-link to="/">Home</router-link></li>
@@ -78,7 +78,25 @@
 .content {
   flex: 1;
   padding: 20px;
-  background-color: #ffffff;
+  background: linear-gradient(
+    to bottom right,
+    #eaf4e6,
+    #ffffff
+  ); /* Sfumatura dal verde chiaro al bianco */
+  border-radius: 8px; /* Aggiunge angoli arrotondati */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra per profondità */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5; /* Colore di background generale */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .footer {

@@ -19,22 +19,23 @@ const deleteFunction = () => {
   props.deleteNote();
 };
 </script>
+
 <style scoped>
 #delete-wrapper {
-  max-width: 35px; /* Reduce size slightly */
+  max-width: 30px; /* Reduced size */
   width: 100%;
   cursor: pointer;
 }
 
 .inner-delete {
   border-color: #5a4a4a;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 3px 3px; /* Slight reduction in radius */
   border-style: solid;
-  border-width: 0 0.8px 0.8px 0.8px;
-  height: 25px;
+  border-width: 0 0.6px 0.6px 0.6px; /* Thinner border */
+  height: 20px; /* Smaller height */
   margin: 0 auto;
-  max-width: 25px;
-  padding: 2px 0;
+  max-width: 20px; /* Reduced width */
+  padding: 1.5px 0; /* Less padding */
   text-align: center;
 }
 
@@ -43,38 +44,38 @@ const deleteFunction = () => {
   border-radius: 50%;
   display: inline-block;
   height: 100%;
-  margin: 0 0.5px;
-  width: 1.5px;
+  margin: 0 0.4px; /* Narrower margins */
+  width: 1.2px; /* Thinner width */
 }
 
 #delete-wrapper .cap {
-  border-radius: 2px;
-  border: 0.8px solid #5a4a4a;
-  height: 8px;
+  border-radius: 1.5px; /* Smaller border radius */
+  border: 0.6px solid #5a4a4a;
+  height: 6px; /* Smaller height */
   margin: 0 auto;
-  max-width: 35px;
+  max-width: 30px; /* Reduced max width */
   position: relative;
   background-color: #ffffff;
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-    background-color 0.3s ease-in-out;
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 0.2s ease-in-out;
   transform-origin: top center;
 }
 
 #delete-wrapper .cap::before {
   background-color: #ffffff;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border: 0.8px solid #5a4a4a;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 0.6px solid #5a4a4a; /* Thinner border */
   content: "";
-  height: 4px;
-  left: 10px;
+  height: 3px; /* Smaller height */
+  left: 8px; /* Adjusted based on new width */
   position: absolute;
-  top: -8px;
-  width: 13px;
+  top: -6px; /* Vertical position adjustment */
+  width: 10px; /* Reduced width */
 }
 
 #delete-wrapper:hover .cap {
-  transform: rotate(-30deg); /* Adjust angle for a more realistic lid opening */
-  background-color: #f0f0f0; /* Light background change for visual depth */
+  transform: rotate(-25deg); /* Adjusted angle */
+  background-color: #f0f0f0; /* Light background change */
 }
 </style>
