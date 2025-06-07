@@ -13,22 +13,30 @@ const title = ref("");
 </script>
 
 <template>
-  <form class="note-form" @submit.prevent="handleSubmit">
-    <input
-      type="text"
-      class="note-input"
-      placeholder="New note"
-      v-model="title"
-    />
-    <button class="create-btn">+</button>
-  </form>
-  <br>
-  <br>
-  <br>
+  <div class="form-container">
+    <form class="note-form" @submit.prevent="handleSubmit">
+      <input
+        type="text"
+        class="note-input"
+        placeholder="New note"
+        v-model="title"
+      />
+      <button class="create-btn">+</button>
+    </form>
+  </div>
 </template>
 
 <style scoped>
 
+.form-container
+{
+  display: flex; /* Use flex to organize inline elements */
+  align-items: center; /* Center items vertically */
+  justify-content: center; 
+   width: 100%;
+   margin-bottom: 40px;
+
+}
 .note-form {
   display: flex; /* Use flex to organize inline elements */
   align-items: center; /* Center items vertically */

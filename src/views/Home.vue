@@ -27,7 +27,7 @@
 h2, h3 {
   font-size: 20px;
   color: green;
-  border-bottom: 2px solid grey; /* Use 'grey' or the color code '#808080' */
+  border-bottom: 2px solid green; /* Use 'grey' or the color code '#808080' */
   padding-bottom: 10px;
   margin-bottom: 15px;
   text-align: center; /* Center the text */
