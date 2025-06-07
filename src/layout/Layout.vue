@@ -75,22 +75,26 @@
   transform: translateY(-2px);
 }
 
+
 .content {
   flex: 1;
   padding: 20px;
   background: linear-gradient(
-    to bottom right,
-    #eaf4e6,
-    #ffffff
-  ); /* Sfumatura dal verde chiaro al bianco */
-  border-radius: 8px; /* Aggiunge angoli arrotondati */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra per profondità */
+    135deg,
+    #82b388 0%,
+    #82b388 50%,
+    #82b388 100%
+  ); /* A vibrant gradient with multiple color stops */
+  border-radius: 12px; /* A more pronounced rounded edge */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More defined shadow for better depth */
+  backdrop-filter: blur(5px); /* Optional: adds a glassy effect */
+  overflow: hidden; /* Ensures content clipped properly */
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5; /* Colore di background generale */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f5; /* General background for contrast */
 }
 
 .container {
