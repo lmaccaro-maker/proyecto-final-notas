@@ -12,6 +12,8 @@
   </div>
 </template>
 
+
+
 <script setup>
 defineProps({
   modelValue: { type: Boolean, default: false },
@@ -21,20 +23,22 @@ function emitChange(event) {
   emit("update:modelValue", event.target.checked);
 }
 </script>
+
 <style scoped>
 label {
   display: inline-block;
   cursor: pointer;
-  margin: 0 calc(100px * 0.15); /* Reduce el margen */
-  width: 30px; /* Caja de ancho reajustado */
-  height: 30px; /* Caja de altura reajustada */
-  border: calc(30px * 0.125) solid #fff; /* Ajusta el grosor del borde */
+  margin: 0 calc(100px * 0.15);
+  width: 30px;
+  height: 30px;
+  border: calc(30px * 0.125) solid #fff;
   border-radius: 12.5%;
-  transition: 400ms 100ms ease-out;
+  transition: border-color 0.4s ease-out, box-shadow 0.4s ease-out;
 }
 
 label:hover {
   border-color: #466fb3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow on hover */
 }
 
 input[type="checkbox"] {
@@ -45,12 +49,12 @@ input[type="checkbox"] {
 
 .mark {
   position: relative;
-  right: calc(30px * -0.5); /* Ajuste para derecha */
-  top: calc(30px * -0.25); /* Ajuste arriba */
-  width: calc(30px * 0.24); /* Ajuste de la anchura */
-  height: calc(30px * 0.74); /* Ajuste de altura */
-  border-right: calc(30px * 0.25) solid #93f9b9;
-  border-bottom: calc(30px * 0.25) solid #93f9b9;
+  right: calc(30px * -0.5);
+  top: calc(30px * -0.25);
+  width: calc(30px * 0.24);
+  height: calc(30px * 0.74);
+  border-right: calc(30px * 0.25) solid #2e7d32; /* Dark green for visibility */
+  border-bottom: calc(30px * 0.25) solid #2e7d32; 
   transform: rotate(45deg) scale(0);
   opacity: 0;
   transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.5);
@@ -61,7 +65,7 @@ input[type="checkbox"] {
   position: absolute;
   left: calc(30px * -0.125);
   bottom: calc(30px * -0.25);
-  border: calc(30px * 0.125) solid #93f9b9;
+  border: calc(30px * 0.125) solid #2e7d32; /* Consistent with check */
   border-radius: 50%;
 }
 
@@ -70,7 +74,7 @@ input[type="checkbox"] {
   position: absolute;
   right: calc(30px * -0.25);
   top: calc(30px * -0.125);
-  border: calc(30px * 0.125) solid #93f9b9;
+  border: calc(30px * 0.125) solid #2e7d32; /* Consistent with check */
   border-radius: 50%;
 }
 
@@ -81,6 +85,7 @@ input[type="checkbox"]:checked + label .mark {
 
 input[type="checkbox"]:focus + label {
   animation: 400ms linear cb-pop;
+  box-shadow: 0 0 5px #2e7d32; /* Highlight with focused shadow */
 }
 
 @keyframes cb-pop {

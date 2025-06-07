@@ -1,16 +1,14 @@
-<script setup></script>
-
 <template>
-  <div class="home-container">
-    <!-- Contents of the home page -->
+  <div class="home-container" 
+       :style="{ backgroundImage: 'url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg)' }">
     <h2>This is a webpage where you can save all your notes</h2>
+    <h3>Here you can manage all your tasks and more!</h3>
   </div>
 </template>
 
 <style scoped>
 .home-container {
   height: 100vh; /* Full height for demonstration */
-  background-image: url("https://img.freepik.com/foto-gratis/apilado-tarjeta-verde-telon-fondo-abstracto_23-2147981589.jpg");
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center image within the container */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -19,12 +17,22 @@
   justify-content: center;
   flex-direction: column;
   color: #333; /* Text color for readability */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Optional for text clarity */
 }
 
 /* Header Styles */
 h2 {
   font-size: 20px;
-  color: #grey;
+  color: green;
+  border-bottom: 2px solid #grey;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+
+h3 {
+  font-size: 20px;
+  color: green;
   border-bottom: 2px solid #grey;
   padding-bottom: 10px;
   margin-bottom: 15px;
