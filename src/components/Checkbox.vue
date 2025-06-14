@@ -26,16 +26,16 @@ label {
   display: inline-block;
   cursor: pointer;
   margin: 0 calc(35px * 0.15);
-  width: 20px; /* Adjusted width to match trash can size */
-  height: 20px; /* Adjusted height to match trash can size */
-  border: calc(20px * 0.125) solid #fff; /* Proportional border size */
-  border-radius: 10%; /* Adjusted radius for smaller checkbox */
+  width: 20px;
+  height: 20px;
+  border: calc(20px * 0.125) solid #fff;
+  border-radius: 10%;
   transition: border-color 0.4s ease-out, box-shadow 0.4s ease-out;
 }
 
 label:hover {
   border-color: #466fb3;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Subtle shadow scaled to match size */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 input[type="checkbox"] {
@@ -82,7 +82,7 @@ input[type="checkbox"]:checked + label .mark {
 
 input[type="checkbox"]:focus + label {
   animation: 400ms linear cb-pop;
-  box-shadow: 0 0 3px #2e7d32; /* Focused shadow adapted for smaller checkbox */
+  box-shadow: 0 0 3px #2e7d32;
 }
 
 @keyframes cb-pop {

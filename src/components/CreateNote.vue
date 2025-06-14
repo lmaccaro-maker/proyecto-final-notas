@@ -27,20 +27,17 @@ const title = ref("");
 </template>
 
 <style scoped>
-
-.form-container
-{
-  display: flex; /* Use flex to organize inline elements */
-  align-items: center; /* Center items vertically */
-  justify-content: center; 
-   width: 100%;
-   margin-bottom: 40px;
-
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
 }
 .note-form {
-  display: flex; /* Use flex to organize inline elements */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center form contents horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 400px;
   background-color: #eaf4e6;
   padding: 10px;

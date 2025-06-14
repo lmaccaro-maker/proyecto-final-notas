@@ -75,7 +75,6 @@
   transform: translateY(-2px);
 }
 
-
 .content {
   flex: 1;
   padding: 20px;
@@ -93,7 +92,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f0f5; /* General background for contrast */
 }
 

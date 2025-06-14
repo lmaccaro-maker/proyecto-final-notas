@@ -24,7 +24,8 @@
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Optional for text clarity */
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: 20px;
   color: green;
   border-bottom: 2px solid green; /* Use 'grey' or the color code '#808080' */
